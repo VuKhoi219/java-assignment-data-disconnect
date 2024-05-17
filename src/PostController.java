@@ -15,8 +15,10 @@ public class PostController {
         String desc = sc.nextLine();
         System.out.println("Enter avatar:");
         String avatar = sc.nextLine();
-        System.out.println("Enter writer:");
-        String writer = sc.nextLine();
+        System.out.println("Enter main content:");
+        String mainContent = sc.nextLine();
+        System.out.println("Enter author:");
+        String author = sc.nextLine();
         System.out.println("Enter date of writing:");
         String date = sc.nextLine();
         PostList postList = new PostList();
@@ -24,15 +26,16 @@ public class PostController {
         postList.setId(id);
         postList.setArticleTitle(title);
         postList.setDescribe(desc);
-        postList.setWriter(writer);
+        postList.setAuthor(author);
         postList.setAvatar(avatar);
-        postList.setDateofwriting(date);
+        postList.setMain_content(mainContent);
+        postList.setDate_written(date);
     }
     public void showPostList(){
-        System.out.printf("%-10s ||%-10s ||%-10s ||%-10s ||%-10s ||%-10s\n", "Id", "Article title", "describe", "avatar", "writer", "date of writing");
+        System.out.printf("%-10s ||%-10s ||%-10s ||%-10s ||%-10s ||%-10s ||%-10s\n", "Id", "Article title", "describe", "avatar","main content", "author", "date written");
         for(int i=0; i<postlists.size(); i++){
             PostList pl = postlists.get(i);
-            System.out.printf("%-10s ||%-10s ||%-10s ||%-10s ||%-10s ||%-10s\n", pl.getId(), pl.getArticleTitle(), pl.getDescribe(), pl.getAvatar(), pl.getWriter(), pl.getDateofwriting());
+            System.out.printf("%-10s ||%-10s ||%-10s ||%-10s ||%-10s ||%-10s ||%-10s\n", pl.getId(), pl.getArticleTitle(), pl.getDescribe(), pl.getAvatar(), pl.getMain_content(),pl.getAuthor(), pl.getDate_written());
 
         }
     }
@@ -45,8 +48,8 @@ public class PostController {
             PostList pl = postlists.get(i);
             if(pl.getId() == id){
                 key = i;
-                System.out.printf("%-10s ||%-10s ||%-10s ||%-10s ||%-10s ||%-10s\n", "Id", "Article title", "describe", "avatar", "writer", "date of writing");
-                System.out.printf("%-10s ||%-10s ||%-10s ||%-10s ||%-10s ||%-10s\n", pl.getId(), pl.getArticleTitle(), pl.getDescribe(), pl.getAvatar(), pl.getWriter(), pl.getDateofwriting());
+                System.out.printf("%-10s ||%-10s ||%-10s ||%-10s ||%-10s ||%-10s ||%-10s\n", "Id", "Article title", "describe", "avatar","Main_content", "author", "Date_written");
+                System.out.printf("%-10s ||%-10s ||%-10s ||%-10s ||%-10s ||%-10s ||%-10s\n", pl.getId(), pl.getArticleTitle(), pl.getDescribe(), pl.getAvatar(), pl.getMain_content(), pl.getAuthor(), pl.getDate_written());
             }
         }
         if (key == -1) {

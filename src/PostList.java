@@ -3,9 +3,18 @@ public class PostList {
     private String articleTitle;
     private String describe;
     private String avatar;
-    private String writer ;
-    private String dateofwriting;
+    private String main_content;
+    private String author;
+    private String date_written;
     public PostList(){
+    }
+
+    public String getMain_content() {
+        return main_content;
+    }
+
+    public void setMain_content(String main_content) {
+        this.main_content = main_content;
     }
 
     public String getArticleTitle() {
@@ -24,12 +33,12 @@ public class PostList {
         this.avatar = avatar;
     }
 
-    public String getDateofwriting() {
-        return dateofwriting;
+    public String getDate_written() {
+        return date_written;
     }
 
-    public void setDateofwriting(String dateofwriting) {
-        this.dateofwriting = dateofwriting;
+    public void setDate_written(String date_written) {
+        this.date_written = date_written;
     }
 
     public String getDescribe() {
@@ -48,11 +57,11 @@ public class PostList {
         this.id = id;
     }
 
-    public String getWriter() {
-        return writer;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setWriter(String writer) {
-        this.writer = writer;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }
